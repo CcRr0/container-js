@@ -3,7 +3,7 @@ import { Heap, HeapComparator } from "@container-js/heap";
 export class PriorityQueue<T> {
     private readonly heap: Heap<T>;
 
-    constructor(comparator: PriorityQueueComparator<T>, data: T[]) {
+    constructor(comparator: PriorityQueueComparator<T>, data: T[] = []) {
         this.heap = new Heap(comparator, data);
     }
 

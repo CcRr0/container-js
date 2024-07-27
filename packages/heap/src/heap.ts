@@ -29,15 +29,12 @@ export class Heap<T> {
         const left: number = this.leftChildIndex(index);
         const right: number = this.rightChildIndex(index);
         let less: number = index;
-
         if (left < this.heap.length && this.comparator(this.heap[left], this.heap[less]) < 0) {
             less = left;
         }
-
         if (right < this.heap.length && this.comparator(this.heap[right], this.heap[less]) < 0) {
             less = right;
         }
-
         if (less !== index) {
             this.swap(index, less);
             this.siftDown(less);
@@ -52,10 +49,6 @@ export class Heap<T> {
 
     public size(): number {
         return this.heap.length;
-    }
-
-    public isEmpty(): boolean {
-        return this.heap.length === 0;
     }
 
     public get(): T | null {
