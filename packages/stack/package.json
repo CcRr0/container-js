@@ -1,0 +1,23 @@
+{
+    "name": "@container-js/stack",
+    "version": "1.0.7",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "rm -rf dist/* && tsc"
+    },
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/CcRr0/container-js.git"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "@container-js/list": "^1.0.9"
+    },
+    "devDependencies": {
+        "typescript": "^5.5.4"
+    }
+}

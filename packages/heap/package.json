@@ -1,0 +1,20 @@
+{
+    "name": "@container-js/heap",
+    "version": "1.0.3",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "rm -rf dist/* && tsc"
+    },
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/CcRr0/container-js.git"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "typescript": "^5.5.4"
+    }
+}

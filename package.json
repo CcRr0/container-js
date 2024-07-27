@@ -1,0 +1,15 @@
+{
+    "private": true,
+    "workspaces": [
+        "packages/list",
+        "packages/queue",
+        "packages/stack",
+        "packages/deque",
+        "packages/heap",
+        "packages/priority-queue",
+        "packages/core"
+    ],
+    "devDependencies": {
+        "typescript": "^5.5.4"
+    }
+}
