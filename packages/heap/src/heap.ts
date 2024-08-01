@@ -2,42 +2,41 @@ export class Heap<T> {
     private readonly heap: T[];
     private readonly comparator: HeapComparator<T>;
 
-    private parentIndex = (index: number): number => (index - 1) >> 1;
-    private leftChildIndex = (index: number): number => index * 2 + 1;
-    private rightChildIndex = (index: number): number => index * 2 + 2;
-
     private swap(i: number, j: number): void {
         [this.heap[i], this.heap[j]] = [this.heap[j], this.heap[i]];
     }
 
     private build(): void {
-        for (let i: number = this.parentIndex(this.heap.length - 1); i >= 0; i--) {
+        for (let i: number = (this.heap.length - 2) >> 1; i >= 0; i--) {
             this.siftDown(i);
         }
     }
 
     private siftUp(index: number): void {
-        let parent: number = this.parentIndex(index);
+        let parent: number = (index - 1) >> 1;
         while (index > 0 && this.comparator(this.heap[parent], this.heap[index]) > 0) {
             this.swap(parent, index);
             index = parent;
-            parent = this.parentIndex(index);
+            parent = (index - 1) >> 1;
         }
     }
 
     private siftDown(index: number): void {
-        const left: number = this.leftChildIndex(index);
-        const right: number = this.rightChildIndex(index);
-        let less: number = index;
-        if (left < this.heap.length && this.comparator(this.heap[left], this.heap[less]) < 0) {
-            less = left;
-        }
-        if (right < this.heap.length && this.comparator(this.heap[right], this.heap[less]) < 0) {
-            less = right;
-        }
-        if (less !== index) {
+        while (true) {
+            const left: number = index << 1 + 1;
+            const right: number = left + 1;
+            let less: number = index;
+            if (left < this.heap.length && this.comparator(this.heap[less], this.heap[left]) > 0) {
+                less = left;
+            }
+            if (right < this.heap.length && this.comparator(this.heap[less], this.heap[right]) > 0) {
+                less = right;
+            }
+            if (less === index) {
+                break;
+            }
             this.swap(index, less);
-            this.siftDown(less);
+            index = less;
         }
     }
 

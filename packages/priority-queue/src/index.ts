@@ -1,1 +1,1 @@
-export { PriorityQueue, PriorityQueueComparator, Less, Greater } from "./priority-queue";
+export { PriorityQueue, PriorityQueueComparator, Greater, Less } from "./priority-queue";
