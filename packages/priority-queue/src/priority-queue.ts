@@ -30,22 +30,10 @@ export class PriorityQueue<T> {
 
 export interface PriorityQueueComparator<T> extends HeapComparator<T> {}
 
-export const Less: PriorityQueueComparator<any> = (a, b): number => {
-    if (a > b) {
-        return 1;
-    } else if (a < b) {
-        return -1;
-    } else {
-        return 0;
-    }
+export const Greater: PriorityQueueComparator<any> = (a, b): number => {
+    return a > b ? 1 : 0;
 };
 
-export const Greater: PriorityQueueComparator<any> = (a, b): number => {
-    if (b > a) {
-        return 1;
-    } else if (b < a) {
-        return -1;
-    } else {
-        return 0;
-    }
+export const Less: PriorityQueueComparator<any> = (a, b): number => {
+    return a < b ? 1 : 0;
 };
