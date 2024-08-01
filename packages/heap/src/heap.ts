@@ -23,7 +23,7 @@ export class Heap<T> {
 
     private siftDown(index: number): void {
         while (true) {
-            const left: number = index << 1 + 1;
+            const left: number = (index << 1) + 1;
             const right: number = left + 1;
             let less: number = index;
             if (left < this.heap.length && this.comparator(this.heap[less], this.heap[left]) > 0) {

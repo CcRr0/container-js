@@ -1,6 +1,6 @@
 {
     "name": "@container-js/priority-queue",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
@@ -15,7 +15,7 @@
     },
     "license": "MIT",
     "dependencies": {
-        "@container-js/heap": "^1.0.5"
+        "@container-js/heap": "^1.0.6"
     },
     "devDependencies": {
         "typescript": "^5.5.4"

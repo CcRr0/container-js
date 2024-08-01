@@ -1,6 +1,6 @@
 {
     "name": "@container-js/core",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
@@ -16,9 +16,9 @@
     "license": "MIT",
     "dependencies": {
         "@container-js/deque": "^1.0.6",
-        "@container-js/heap": "^1.0.5",
+        "@container-js/heap": "^1.0.6",
         "@container-js/list": "^1.0.9",
-        "@container-js/priority-queue": "^1.0.6",
+        "@container-js/priority-queue": "^1.0.7",
         "@container-js/queue": "^1.0.7",
         "@container-js/stack": "^1.0.7"
     },
